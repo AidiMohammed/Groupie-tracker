@@ -1,0 +1,22 @@
+C'est un exemple de la structure de projet
+
+Groupie-tracker/
+├── cmd/                  # Entrées principales de l'application (e.g., main.go)
+│   └── main.go           # Point d'entrée principal
+├── config/               # Fichiers et gestion de configuration
+│   └── config.go         # Gestion des configurations globales
+├── controllers/          # Gestionnaires des requêtes HTTP (équivalent des "controllers")
+│   └── user_controller.go
+├── middlewares/          # Middlewares HTTP (authentification, logs, etc.)
+│   └── auth_middleware.go
+├── models/               # Modèles de donnée
+│   └── user.go
+├── routes/               # Gestion des routes
+│   └── web.go            # Routes web
+├── services/             # Services applicatifs
+│   └── user_service.go
+├── utils/                # Fonctions utilitaires (parsing, helpers, etc.)
+│   └── logger.go
+├── views/                # Fichiers de templates (HTML, si tu utilises un rendu côté serveur)
+│   └── user.html
+└── go.mod                # Gestionnaire de dépendances (module Go)
