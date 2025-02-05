@@ -1,4 +1,4 @@
-package model
+package models
 
 // struct of data for API - locations part
 type Locations struct {

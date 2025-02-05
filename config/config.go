@@ -6,9 +6,9 @@ import (
 )
 
 type Config struct {
-	APP_PORT string
-	API_URL string
-	BASE_URL string
+	AppPort string
+	ApiUrl string
+	BaseUrl string
 }
 
 func LoadConfig() (Config,error) {
@@ -20,9 +20,9 @@ func LoadConfig() (Config,error) {
 		return myConfig, err
 	}
 
-	myConfig.APP_PORT = os.Getenv("APP_PORT")
-	myConfig.API_URL = os.Getenv("API_URL")
-	myConfig.BASE_URL = os.Getenv("BASE_URL")
+	myConfig.AppPort = os.Getenv("APP_PORT")
+	myConfig.ApiUrl = os.Getenv("API_URL")
+	myConfig.BaseUrl = os.Getenv("BASE_URL")
 
 	return myConfig,nil
 }

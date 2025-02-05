@@ -34,7 +34,6 @@ func LoadEnvFile(filePath string) error {
 		value := strings.TrimSpace(parts[1])
 
 		value = strings.Trim(value, `"'`)
-
 		os.Setenv(key,value)
 	}
 
@@ -43,4 +42,11 @@ func LoadEnvFile(filePath string) error {
 	}
 
 	return nil
+}
+
+// Function to check if a file exists
+func FileExists(filepath string) bool {
+
+	file, err := os.Stat(filepath)
+	return !os.IsNotExist(err) && !file.IsDir()
 }

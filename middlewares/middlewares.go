@@ -3,6 +3,7 @@ package middlewares
 import (
 	"net/http"
 	"fmt"
+	"groupie-tracker/controllers/system"
 	
 )
 // Middleware to handle unexpected server errors
@@ -11,7 +12,7 @@ func withErrorHandling(next http.HandlerFunc) http.HandlerFunc {
 		defer func() {
 			if rec := recover(); rec != nil {
 				// error in server
-				controllers.ErrorPage(w, http.StatusInternalServerError, "Server encountered an unexpected error")
+				controller.ErrorPage(w, http.StatusInternalServerError, "Server encountered an unexpected error")
 				fmt.Println("Recovered from panic:", rec)
 			}
 		}()
